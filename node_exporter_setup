@@ -1,0 +1,3 @@
+#!/bin/bash 
+
+cd /opt; wget https://github.com/prometheus/node_exporter/releases/download/v0.18.1/node_exporter-0.18.1.linux-amd64.tar.gz; tar -xvf node_exporter-0.18.1.linux-amd64.tar.gz; cd node_exporter-0.18.1.linux-amd64/ ; ./node_exporter --collector.conntrack --collector.cpu --collector.diskstats --collector.entropy --collector.filefd --collector.filesystem --collector.loadavg --collector.mdadm --collector.meminfo --collector.netdev --collector.netstat --collector.stat --collector.textfile --collector.time --collector.vmstat --collector.systemd --collector.mountstats --collector.meminfo_numa --web.listen-address=0.0.0.0:9100 --log.level=info &
